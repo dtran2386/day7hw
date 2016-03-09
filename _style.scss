@@ -1,0 +1,42 @@
+$bg-color: rgb(63, 189, 86);
+$primary-color: white;
+$font: 29px;
+
+@mixin bg {
+    background-color: $bg-color;
+}
+@mixin color {
+    color: white;
+}
+@mixin size {
+    font-size: 29px;
+}
+
+body {
+    font-size: 29px;
+    table, td {
+        border: 1px solid green;
+        padding: 45px;
+        margin: 1%;
+        @include bg;
+        @include color;
+    }
+    
+    #output {
+        @include bg;
+        @include size;
+        @include color;
+        height: 125px;
+        width: 329px;
+        position: absolute;
+        margin: 3.3% 12.25%;
+        border: 1px solid green;
+        text-align: right;
+    }
+    
+    ul {
+        display: inline;
+        text-align: center;
+        font-size: 16px;
+    }
+}
